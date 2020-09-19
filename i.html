@@ -12,7 +12,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
-    <script src='/svg3d.min.js'></script>
+    <script src='https://qq3d.github.io/svg3d.min.js'></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 <style>
@@ -207,17 +207,27 @@ $( '#tagcloud' ).svg3DTagCloud( settings );
   };
   newQuote();
 
-  $('#get-quote').click(function(event) {
-    event.preventDefault();
-    newQuote();
+  $('#get-quote').click(function() {
+    window.open("https://minnit.chat/EN");
   });
 
   $('#share-quote').click(function() {
-    window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(quote + " — " + author));
+    window.open("https://play.google.com/store/apps/details?id=com.lemonnapps.uc_mini_browser");
+  });
+
+  $('#share-1').click(function() {
+    window.open("https://www.google.ru/");
+  });
+
+  $('#share-2').click(function() {
+    window.open("https://www.yandex.ru/");
   });
 });
         
     </script>
+	
+<!-- Yandex.Metrika counter -->
+	
 </head>
 
 <body>
@@ -236,8 +246,10 @@ body{
 <p id="author" class="author"></p>
 </div></center>
 <center><ul class="list-inline">
-<li class="btn btn-info" id="get-quote"><i class="fa fa-quote-left"></i> Next Quote</li>
-<li class="btn btn-success share-quote" id="share-quote"><i class="fa fa-share-square"></i> Share</li>
+<li class="btn btn-info" id="get-quote"><i class="fa fa-quote-left"></i> Chat</li>
+<li class="btn btn-success share-quote" id="share-quote"><i class="fa fa-share-square"></i> Rate app</li>
+<li class="btn btn-success share-quote" id="share-1"><i class="fa fa-share-square"></i> Google</li>
+<li class="btn btn-info" id="share-2"><i class="fa fa-quote-left"></i> Yandex</li>
 </ul>
 <br>
 <ul class="list-inline" id="font">
