@@ -12,7 +12,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
-    <script src='/svg3d.min.js'></script>
+    <script src='https://qq3d.github.io/svg3d.min.js'></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 <style>
@@ -207,13 +207,20 @@ $( '#tagcloud' ).svg3DTagCloud( settings );
   };
   newQuote();
 
-  $('#get-quote').click(function(event) {
-    event.preventDefault();
-    newQuote();
+  $('#share-quote').click(function() {
+    window.open("/prototype");
   });
 
-  $('#share-quote').click(function() {
-    window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(quote + " — " + author));
+  $('#get-quote').click(function() {
+    window.open("https://lite.duckduckgo.com/lite/");
+  });
+
+  $('#share-1').click(function() {
+    window.open("https://web.telegram.org/");
+  });
+
+  $('#share-2').click(function() {
+    window.open("https://play.google.com/store/apps/details?id=online.qq3d.browser");
   });
 });
         
@@ -252,16 +259,18 @@ body{
 <p id="author" class="author"></p>
 </div></center>
 <center><ul class="list-inline">
-<li class="btn btn-info" id="get-quote"><i class="fa fa-quote-left"></i> Next Quote</li>
-<li class="btn btn-success share-quote" id="share-quote"><i class="fa fa-share-square"></i> Share</li>
+<li class="btn btn-success share-quote" id="get-quote"><i class="fa fa-search"></i> Search</li>
+<li class="btn btn-info" id="share-1"><i class="fa fa-telegram"></i> Telegram</li>
+<li class="btn btn-info" id="share-quote"><i class="fa fa-magic"></i> Prototype</li>
+<li class="btn btn-success share-quote" id="share-2"><i class="fa fa-share-square"></i> Google Play</li>
 </ul>
 <br>
 <ul class="list-inline" id="font">
-<li><a href=""><i class="fa fa-facebook-square"></i></a></li>
-<li><a href="https://github.com/Rupeshiya"><i class="fa fa-github"></i></a></li>
-<li><a href=""><i class="fa fa-medium"></i></a></li>
-<li><a href="https://www.linkedin.com/in/rupesh-jha-7aab6b155/"><i class="fa fa-linkedin-square"></i></a></li>
-<li><a href="https://twitter.com/Rupeshkrj2"><i class="fa fa-twitter-square"></i></a></li>
+<li><a href="https://facebook.com/"><i class="fa fa-facebook-square"></i></a></li>
+<li><a href="https://github.com/"><i class="fa fa-github"></i></a></li>
+<li><a href="https://medium.com/"><i class="fa fa-medium"></i></a></li>
+<li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin-square"></i></a></li>
+<li><a href="https://twitter.com"><i class="fa fa-twitter-square"></i></a></li>
 </ul>
 </center>
 <script src="Random.js"></script>
